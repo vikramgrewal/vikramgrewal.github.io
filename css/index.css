@@ -5,3 +5,37 @@
 .skill-mf .line-mf	{
 	background-color: white
 }
+
+.devicon-git-plain {
+  font-size: 4rem;
+  fill: #4e4e4e
+}
+
+.devicon-git-plain:hover {
+  font-size: 4rem;
+  color: #24b67e;
+}
+
+
+
+/* if you want to change the original color */
+/*.devicon-git-plain path {
+  fill: #4691f6;
+}*/
+
+
+@media (max-width: 575px)  {
+	.about-img img {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}	
+}
+
+@media (min-width: 575px)  {
+	.about-img img {
+		margin-left: 10px;
+		margin-right: auto;
+		display: block;
+	}	
+}
