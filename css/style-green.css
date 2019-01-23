@@ -761,8 +761,8 @@ a:hover {
 }
 
 .portfolio-box:hover img {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .portfolio-img {
