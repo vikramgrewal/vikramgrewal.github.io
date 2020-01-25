@@ -4,7 +4,7 @@
     "details": [
     {
       "appID": "C7NV2676P8.com.vikramgrewal.LocalNotificationsExample",
-      "paths": , ["*", "/"]
+      "paths": , ["*"]
     }
     ]
   }
