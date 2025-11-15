@@ -1,575 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Vikram Grewal</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/font-awesome/css/all.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/devicon.css">
-    <!--  if you want colored versions -->
-    <link rel="stylesheet" href="css/devicon-colors.css">
-    <!-- Main Stylesheet File -->
-    <link href="css/style-green.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikram Grewal - Senior iOS Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<body id="page-top">
-    <!--/ Nav Star /-->
-    <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll" href="#page-top">Vikram Grewal</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll active" href="#work">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll" href="#skill">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll" href="#contact">Contact</a>
-                    </li>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        header {
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        .experience-item {
+            margin-bottom: 35px;
+        }
+
+        .experience-header {
+            margin-bottom: 10px;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .role {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 2px;
+        }
+
+        .period {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .experience-item ul {
+            margin-top: 12px;
+            margin-left: 20px;
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .education {
+            margin-bottom: 30px;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .school {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .degree {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .education-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vikram Grewal</h1>
+            <p class="subtitle">Senior iOS Developer</p>
+            <div class="contact-links">
+                <a href="mailto:contact@vikramgrewal.com">Email</a>
+                <a href="https://linkedin.com/in/vikramgrewal" target="_blank">LinkedIn</a>
+                <a href="https://github.com/vikramgrewal" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2>About</h2>
+            <p class="about-text">
+                Senior iOS Developer with 6+ years of experience building high-performance mobile applications. 
+                Currently at OKX, specializing in Swift, iOS architecture, and creating seamless user experiences 
+                for millions of users worldwide. Proven track record of delivering critical features, optimizing 
+                performance, and mentoring engineering teams.
+            </p>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-header">
+                <span class="school">San Francisco State University</span>
+                <span class="degree">Bachelor's Science Computer Science</span>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company">OKX</div>
+                    <div class="role">Senior iOS Developer (May 2024 - Present) | iOS Developer (October 2022 - May 2024)</div>
+                    <div class="period">October 2022 - Present</div>
+                </div>
+                <ul>
+                    <li>Built and shipped standalone OKX Apple Watch app with real-time complications and power-optimized performance</li>
+                    <li>Led iOS delivery for critical compliance features enabling expansion into new regulated markets</li>
+                    <li>Re-architected core modules with MVVM + optimized data feeds, reducing UI load by ~30%</li>
+                    <li>Improved transaction funnel performance (buy/sell/convert), increasing completion rates by 25%</li>
+                    <li>Delivered conversion tooling that lifted non-KYC → KYC verification rates by 25% in one quarter</li>
+                    <li>Reduced crash rates and improved stability through advanced threading, caching, and performance profiling</li>
+                    <li>Led modularization of legacy components, improving build speed and enabling isolated testing</li>
+                    <li>Partnered with backend + Android + product teams to unify data models and cross-platform behavior</li>
+                    <li>Mentored junior engineers and owned the onshore markets module across teams and timezones</li>
+                    <li>Recovered a failing project post-launch and delivered under tight deadlines</li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <!--/ Nav End /-->
-    <!--/ Intro Skew Star /-->
-    <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
-        <div class="overlay-itro"></div>
-        <div class="intro-content display-table">
-            <div class="table-cell">
-                <div class="container">
-                    <!--<p class="display-6 color-d">Hello, world!</p>-->
-                    <h1 class="intro-title mb-4">I am Vikram Grewal</h1>
-                    <p class="intro-subtitle">
-                        <span class="text-slider-items">IOS Developer, Full Stack Web Developer, Endless Learner</span>
-                        <strong class="text-slider"></strong>
-                    </p>
-                    <p class="pt-3"><a class="btn js-scroll px-4" href="#about" role="button">Learn More</a></p>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company">Visva</div>
+                    <div class="role">iOS Developer</div>
+                    <div class="period">December 2019 - October 2022</div>
                 </div>
+                <ul>
+                    <li>Led the development of a robust chat system migration from Twilio to Sendbird, collaborating closely with backend teams to improve architecture and reduce API response times by 20%</li>
+                    <li>Designed and implemented a custom video player for feeds using AVFoundation, which increased user engagement by 15%</li>
+                    <li>Architected and optimized complex user interfaces using UIKit and Core Animation, ensuring smooth and responsive UI experiences across the app</li>
+                    <li>Implemented a tagging system for posts, improving content organization and enhancing user navigation</li>
+                    <li>Integrated multiple third-party libraries (Alamofire, Mixpanel, Sendbird) using Cocoapods, maintaining project scalability and efficient dependency management</li>
+                </ul>
             </div>
-        </div>
-    </div>
-    <!--/ Intro Skew End /-->
-    <section id="about" class="paralax-mf bg-image about-mf route" style="background-image: url(https://images.unsplash.com/photo-1488580923008-6f98dfbd7a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80)">
-        <div class="overlay-mf"></div>
-        <div class="container">
 
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="title-box text-center">
-                                <h3 class="title-a">
-                          About Me
-                        </h3>
-                                <div class="line-mf"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-shadow-full light-box">
-                        <!-- <div class="row about-img">
-                            <img src="img/testimonial-2.png" class="img-fluid rounded b-shadow-a" alt="">
-                        </div> -->
-
-                        <div class="row">
-                            <div>
-                                <div class="about-me pt-4 pt-md-0">
-                                    <p class="lead">
-                                        I'm a new grad from San Francisco State University who has excellent skills building IOS applications that are able to be used by people all around the world. Thrives on developing exceptional mobile applications that provide fluid user experiences across multiple devices. Always ready to dive head first into any project and enjoys learning new technologies.
-                                    </p>
-                                    <p class="lead">
-                                        In the second half of 2018, I joined Pieced Co. where I work directly with the CEO to develop their internal IOS application. I am now looking for a full time role as an IOS developer to learn more and improve my skills to create better mobile applications!
-                                    </p>
-                                    <p class="lead">
-                                        I love working in teams and collaborating on projects. Excellent written and verbal communication skills. Interested in challenging technical roles building mobile applications.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company">PIECED</div>
+                    <div class="role">iOS Developer</div>
+                    <div class="period">August 2018 - December 2019</div>
                 </div>
+                <ul>
+                    <li>Developed and maintained a high-performing iOS application that streamlined customer data management and facilitated seamless order processing through factory REST APIs</li>
+                    <li>Engineered network calls to communicate XML data with a remote factory, leveraging a local SQLite database to ensure data integrity and reliability</li>
+                    <li>Designed adaptive UI layouts for both iPad and iPhone, ensuring a consistent and user-friendly experience across devices</li>
+                    <li>Optimized app performance by utilizing best practices in multithreading and memory management, reducing load times and enhancing user satisfaction</li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="work" class="paralax-mf bg-image about-mf route" style="background-image: url(https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)">
-        <div class="overlay-mf"></div>
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="title-box text-center">
-                                <h3 class="title-a">
-                          Work Experience
-                        </h3>
-                                <div class="line-mf"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-shadow-full light-box">
-                        <!-- <div class="row about-img">
-                            <img src="img/testimonial-2.png" class="img-fluid rounded b-shadow-a" alt="">
-                        </div> -->
-
-                        <div class="row ">
-                            <div class="col-sm-12">
-                                <h3><a href="https://www.pieced.co/" target="_blank">Pieced</a></h3>
-                                <p class="info">
-                                    IOS Developer
-                                    <span> • </span><span class="info-summary">San Francisco, CA</span><span> • </span><em class="date">August 2018 - Present</em></p>
-                                <div>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Developed and deployed initial internal IOS application to automate sending customer orders to clothing factory.
-                                    </p>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Worked directly with CEO ensuring end-to-end needs were met.
-                                    </p>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Integrated Auto Layout, so that user interface is responsive for both iPhone and iPad.
-                                    </p>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Simultaneously managed multiple features meeting strict deadlines.
-                                    </p>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Designed and implemented SQLite database.
-                                    </p>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Included multiple CocoaPods to ensure great user experience.
-                                    </p>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Created automation scripts to analyze SQLite database and send clothing orders to factory via REST API.
-                                    </p>
-                                    <p class="point"><span class="bullet-point">• </span>
-                                        Built responsive dynamic interfaces after extracting information from custom created JSON resources.
-                                    </p>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--/ Section Portfolio Start /-->
-    <section id="portfolio" class="portfolio-mf paralax-mf bg-image" style="background-image: url(img/portfolio-bg.jpg)">
-        <div class="overlay-mf"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="title-box text-center">
-                        <h3 class="title-a">
-                          Portfolio
-                        </h3>
-                        <div class="line-mf"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="portfolio-box">
-                        <div class="portfolio-content portfolio-header">
-                            <div class="row">
-                                <div class="col-8">
-                                    <h2 class="w-title">Pocket Fitness</h2>
-                                </div>
-                                <div class="col-4">
-                                    <div class="w-link">
-                                        <a href="https://github.com/vikramgrewal/Pocket-Fitness" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="#portfolio">
-                                            <i class="devicons devicon-swift-plain"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-img">
-                            <img src="img/pocket-fitness-ss.png" alt="" class="img-fluid img-portfolio">
-                        </div>
-                        <div class="portfolio-description">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>An IOS application that allows users to keep track of their fitness journey.</p>
-                                    <p>Architected application using MVC design pattern. Implemented login authentication using Facebook Login API, Keychain, and UserDefaults. Created all view layouts programmatically using AutoLayout. Managed SQLite database using SQLite.swift dependency. Packaged external optional resources that can be added using JSONSerialization. Deployed beta testing for application through TestFlight.</p>
-                                    <p>Technical Tools Used: AutoLayout, SQLite, CocoaPods, TestFlight, Facebook Login, Serialization, UserDefaults, Keychain</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-box">
-                        <div class="portfolio-content portfolio-header">
-                            <div class="row">
-                                <div class="col-6 col-md-4">
-                                    <h2 class="w-title">Match!</h2>
-                                </div>
-                                <div class="col-6 col-md-8">
-                                    <div class="w-link">
-                                        <a href="https://github.com/vikramgrewal/Match" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="#portfolio">
-                                            <i class="devicon-javascript-plain"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-img">
-                            <img src="img/match-ss.png" alt="" class="img-fluid img-portfolio">
-                        </div>
-                        <div class="portfolio-description">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>A node.js application built on the Express web framework.</p>
-                                    <p>Using Node.js with Express.js framework for the app/game. This allowed us to follow a MVC architecture guideline. PostgreSQL was used for the database as thats the technology heroku uses. Bootstrap was used as the front-end framework and Handlebars.js was used to template our views. The socket.io node module was used to accomplish real-time communication between the clients and server. This was necessary for the chat box and the turn-taking logic for the game. The emit method for socket.io was used to broadcast messages to the different game rooms, such as informing the user that their turn has started. While our express server was running, we were constantly listening to these messages to broadcast to the correct users about what needs to be done next.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-box">
-                        <div class="portfolio-content portfolio-header">
-                            <div class="row">
-                                <div class="col-6 col-md-8">
-                                    <h2 class="w-title">Home Place</h2>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="w-link">
-                                        <a href="https://github.com/vikramgrewal/Home-Place" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="#portfolio">
-                                            <i class="devicon-javascript-plain"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-img">
-                            <img src="img/home-place-ss.png" alt="" class="img-fluid img-portfolio">
-                        </div>
-                        <div class="portfolio-description">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>A full stack web application built to replicate the functionality of a real estate website.</p>
-                                    <p>Created front end of application using EJS template engine to script Bootstrap, HTML/CSS layouts. Deployed backend using Express framework. Architected application using MVC design pattern. Implemented authentication using Passport.js middleware. Designed RESTful API to serve correct data following HTTP Protocol. Used Cloudinary API/middleware to implement photo uploading using cloud services. Managed and modeled database objects using Sequelize MySQL wrapper. Added Google Places / Google Autocomplete to validate postings. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-box">
-                        <div class="portfolio-content portfolio-header">
-                            <div class="row">
-                                <div class="col-6 col-md-4">
-                                    <h2 class="w-title">Tank War</h2>
-                                </div>
-                                <div class="col-6 col-md-8">
-                                    <div class="w-link">
-                                        <a href="https://github.com/vikramgrewal/Tank-War" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="#portfolio">
-                                            <i class="devicon-java-plain-wordmark"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-img">
-                            <img src="img/tank-war-ss.png" alt="" class="img-fluid img-portfolio">
-                        </div>
-                        <div class="portfolio-description">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>A Java game that involves two tanks going to war with each other.</p>
-                                    <p>Game was built from scratch. We ended up using a JFrame that held a JPanel that then held Jcomponents, which we felt made it the easiest to draw out the game. The game frame holds an instance of our players, game, view controller(key listener) and views (game objects). Each component that is drawn on screen extends our abstract game object class, which then extends our JComponent class. Another important part of the program was collision detection, ie the class that lets us detect when two objects are connecting. For example when a bullet hits a wall or tank, it can tell the program what it needs to do. In our game instance we have an instance of our collision detection class. This class then holds an instance of our game. In order to have quick access to object locations. Using our method called getRectangle which we can use to get access to coordinates for given object. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-box">
-                        <div class="portfolio-content portfolio-header">
-                            <div class="row">
-                                <div class="col-6 col-md-8">
-                                    <h2 class="w-title">Web Server</h2>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="w-link">
-                                        <a href="https://github.com/vikramgrewal/WebServer" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="#portfolio">
-                                            <i class="devicon-java-plain-wordmark"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-img">
-                            <img src="img/web-server-ss.png" alt="" class="img-fluid img-portfolio">
-                        </div>
-                        <div class="portfolio-description">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>The purpose of this project is to write a web server application capable of a subset of the HTTP protocol.</p>
-                                    <p>Created a mock web server that was able to handle the following methods: Read, and store, standard configuration files for use in responding to client request, parse HTTP Requests, generate and send HTTP Responses, respond to multiple simultaneous requests through the use of threads, and logging.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-box">
-                        <div class="portfolio-content portfolio-header">
-                            <div class="row">
-                                <div class="col-8 col-md-8">
-                                    <h2 class="w-title">Expression Evaluator</h2>
-                                </div>
-                                <div class="col-4 col-md-4">
-                                    <div class="w-link">
-                                        <a href="https://github.com/vikramgrewal/Expression-Evaluator" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="#portfolio">
-                                            <i class="devicon-java-plain-wordmark"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-img">
-                            <img src="img/expres-eval-ss.png" alt="" class="img-fluid img-portfolio">
-                        </div>
-                        <div class="portfolio-description">
-                            <div class="row">
-                                <div class="col-12">
-                                    <p>Expression Evaluator is a simple calculator with a GUI that evaluates simple mathematical expressions using operators (^, *, /, +, -). </p>
-                                    <p>The GUI evaluates the expression as each button is pressed keeping the current state of the calculator. If the next button is not a valid command compared to the current state of the calculator, then the expression will not change. This uses conditional checks. Once the expression is a valid expression of infix notation, the expression will be converted to postfix notation. Evaluating a postfix notation expression is a much lighter task than evluating an infix notation expression. To convert an infix notation to postfix expression, only one stack is used to hold the operators. When we encounter we an operand we add it to a new expression, but when we encounter an operator we must push it to the stack(if it is empty). Otherwise, we must compare the current operator's precedence with that of the stack's top operator. If the current operator is of less or equal precedence, we pop the operators into the expression. Parentheses makes it slightly more complicating since the precedence only slightly matters. Once the expression is converted, you just push the opererands to a separate operand stack. If you encounter an operator, you perform the execute method of the operator with the top two operands returning and pushing that value to the stack.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/ Section Portfolio End /-->
-
-    <!--/ Section Blog Star /-->
-    <section id="skill" class="skill-mf sect-pt4 paralax-mf route bg-image" style="background-image: url(https://images.unsplash.com/photo-1529669851596-ba9a5549af95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80)">
-        <div class="overlay-mf"></div>
-        <div class="container">
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="title-box text-center">
-                        <h3 class="title-a">
-                                        Skills
-                                      </h3>
-                        <p class="subtitle-a" style="font-weight: 600">
-                            Here are various aspects of IOS development I have experience working with.
-                        </p>
-                        <div class="line-mf"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                                        Swift
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        Objective-C
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        Cocoa
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        GCD
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-                                        Dependency Management
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        Unit Testing
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        Source Control
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-                                        Core Data
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        SQL
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        Interface Builder
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        AutoLayout
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        Adaptive Layout
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        RESTful Web Services
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        </div>
-    </section>
-    <!--/ Section Blog End /-->
-
-    <!--/ Section Contact-Footer Star /-->
-    <section id="contact" class="paralax-mf bg-image sect-pt4 route">
-        <div class="container">
-
-        </div>
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="copyright-box">
-                            <h6>If you have any exciting opportunities or just want to chat with me, feel free to get in touch.</h6>
-                            <div class="social-icons">
-                                <a href="https://github.com/vikramgrewal" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="https://linkedin.com/in/vikramgrewal" target="_blank">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                        <a href="tel:4085966379">
-                                            <i class="fas fa-phone"></i>
-                                        </a>
-<a href="mailto:contact@vikramgrewal.com" target="_blank">
-                                            <i class="fas fa-envelope"></i>
-                                        </a>
-                            </div>
-                        </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>&copy; 2024 Vikram Grewal</p>
         </footer>
-    </section>
-    <!--/ Section Contact-footer End /-->
-    <a href="#" class="back-to-top">
-        <i class="fa fa-chevron-up"></i>
-    </a>
-    <div id="preloader"></div>
-    <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/popper/popper.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/counterup/jquery.waypoints.min.js"></script>
-    <script src="lib/counterup/jquery.counterup.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
+    </div>
 </body>
-
 </html>
